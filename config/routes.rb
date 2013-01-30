@@ -1,5 +1,7 @@
 Prelude::Application.routes.draw do
-  get "articles/new"
+  mount Ckeditor::Engine => '/ckeditor'
+
+  resources :articles
 
   get "pages/home"
   root :to => 'pages#home'
