@@ -1,0 +1,27 @@
+<%= simple_form_for(@article) do |article| %>
+	<div class="form-horizontal">
+
+		<%= article.input :title %> 
+
+		<%= article.input :summary, html: {rows: "3"} %>
+
+		<%= article.input :author %>
+
+		<%= article.input :published_at %>
+
+		<div class="control-group">
+			<%= article.label :content, class: "control-label" %>
+			<div class="controls">
+				<%= article.cktext_area :content, rows: "3" %>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<div class="controls">
+				<%= article.submit "Submit", class: "btn btn-primary" %>
+			</div>
+		</div>
+
+	</div>
+<% end %>
+

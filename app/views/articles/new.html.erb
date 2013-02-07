@@ -1,41 +1,5 @@
 <h1>Create a New Article</h1>
-<%= form_for(@article) do |article| %>
-	<div class="form-horizontal">
+	<%= render 'form' %>
 
-		<div class="control-group">
-			<%= article.label :title, class: "control-label" %>
-			<div class="controls">
-				<%= article.text_field :title %>
-			</div>
-		</div>
 
-		<div class="control-group">
-			<%= article.label :summary, class: "control-label" %>
-			<div class="controls">
-				<%= article.text_field :summary %>
-			</div>
-		</div>
-
-		<div class="control-group">
-			<%= article.label :content, class: "control-label" %>
-			<div class="controls">
-				<%= article.cktext_area :content, rows: "3" %>
-			</div>
-		</div>
-
-		<div class="control-group">
-			<%= article.label :author, class: "control-label" %>
-			<div class="controls">
-				<%= article.text_field :author %>
-			</div>
-		</div>
-
-		<div class="control-group">
-			<div class="controls">
-				<%= article.submit "Submit", class: "btn btn-primary" %>
-			</div>
-		</div>
-
-	</div>
-<% end %>
 
