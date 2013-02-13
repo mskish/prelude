@@ -4,7 +4,7 @@ Prelude::Application.routes.draw do
   resources :articles
 
   get "pages/home"
-  root :to => 'pages#home'
+  root :to => 'articles#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
