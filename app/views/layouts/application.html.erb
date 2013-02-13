@@ -9,18 +9,11 @@
 	</head>
 	
 	<body>
-		<div class="navbar navbar-inverse">
-    	<div class="navbar-inner">
-				
-				<%= link_to "Prelude", root_path, class: "brand"%> 
-
-				<ul class="nav">
-					<li class="active"><%= link_to "Home", root_path %></li>
-					<li><%= link_to "New Article", new_article_path %></li>
-				</ul>
-			</div>
-    </div>
+		<%= render "layouts/header" %>
 		<div class="container">
+			<% flash.each do |name, message|%>
+				<%= content_tag :div, message, class: "alert alert-#{name}" %>
+			<% end %>
 			<%= yield %>
 		</div>
 	</body>
