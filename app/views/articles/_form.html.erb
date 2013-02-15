@@ -3,13 +3,13 @@
 
 		<%= article.input :title %> 
 
-		<%= article.input :summary, html: {rows: "3"} %>
+		<%= article.input :summary, as: :text, input_html: { rows: "3"} %>
 
 		<%= article.input :author %>
 
 		<%= article.input :published_at %>
 
-		<%= article.input :issue_id %>
+		<%= article.input :issue_id, collection: @issues %>
 
 		<div class="control-group">
 			<%= article.label :content, class: "control-label" %>

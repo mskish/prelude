@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def new 
   	@article = Article.new
+  	@issues = Issue.all
   end
 	
 	def create
@@ -15,6 +16,7 @@ class ArticlesController < ApplicationController
 
 	def edit
 		@article = Article.find(params[:id])
+		@issues = Issue.all
 	end
 
 	def update
