@@ -5,7 +5,7 @@
 
 		<h1><%= link_to article.title, article %></h1>
 		<h3><%= article.author %></h3>
-		<h3><%= article.published_at %></h3>
+		<h3><%= article.published_at.strftime("%B %d, %Y") if article.published_at %></h3>
 		<p class="lead"><%= article.summary %></p>
 
 	<% end %> 

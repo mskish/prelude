@@ -1,4 +1,10 @@
+$linkColor: #f89406;
+
 @import "bootstrap";
+body {
+	padding-top: 60px;
+}
+@import 'bootstrap-responsive';
 .articles {
 	text-align: center;
 }
