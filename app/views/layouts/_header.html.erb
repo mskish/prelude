@@ -12,9 +12,7 @@
       <%= link_to "Bloomberg Web Editors' Choice", root_path, class: "brand" %>
  
       <div class="nav-collapse collapse">
-      	<ul class="nav">
-	        <li><%= link_to "Home", root_path %></li>
-		    </ul>
+      	
 		    <ul class="nav pull-right">
           <% if user_signed_in? %>
             <li><%= link_to "New Article",new_article_path %></li>
