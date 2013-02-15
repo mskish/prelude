@@ -3,7 +3,7 @@
 
 		<%= article.input :title %> 
 
-		<%= article.input :summary, html: {rows: "3"} %>
+		<%= article.input :summary, as: :text, inner_html: {rows: "3"} %>
 
 		<%= article.input :author %>
 
