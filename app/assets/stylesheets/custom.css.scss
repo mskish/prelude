@@ -15,3 +15,15 @@ body {
 	color: gray;
 	font-weight: normal; 
 }
+.footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $grayMediumLight;
+	color: $grayLight;
+	a {
+		color: $gray;
+		&:hover { 
+			color: $grayDarker;
+    }
+  }  
+}
