@@ -5,6 +5,7 @@ body {
 	padding-top: 60px;
 }
 @import 'bootstrap-responsive';
+
 .articles {
 	text-align: center;
 }
@@ -18,12 +19,27 @@ body {
 .footer {
 	margin-top: 45px;
 	padding-top: 5px;
-	border-top: 1px solid $grayMediumLight;
-	color: $grayLight;
-	a {
-		color: $gray;
-		&:hover { 
-			color: $grayDarker;
+	border-top: 1px solid $gray;
+	color: $gray;
+}
+
+@media (max-width: 767px) {
+	h1, h2, h3, h4, h5, h6 {
+  font-size: 2em !important;
+	}
+
+  .byline {
+  font-size: 1.4em !important;
+  }
+
+
+	p {
+  font-size: 1em;
+  line-height: 1.7em;
+    &.lead {
+      font-size: 1em;
+      line-height: 1.7em;
     }
-  }  
+	}
+
 }

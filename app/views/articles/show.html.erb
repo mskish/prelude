@@ -1,7 +1,9 @@
 <h1><%= @article.title %></h1>
-<h3><%= @article.author %></h3>
-<h3><%= @article.published_at.strftime("%B %d, %Y") %></h3>
-<p class="lead"><%= @article.summary %></p> 
+<h3 class="byline">
+  By <%= @article.author %>, 
+  <%= @article.published_at.strftime("%B %d, %Y") %>
+</h3>
+<p class="lead summary"><%= @article.summary %></p> 
 <p><%= @article.content.html_safe %></p>
 
 
