@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def index 
-		@articles = Article.all
+		@articles = Article.order("title asc")
 	end
 
 	def show
