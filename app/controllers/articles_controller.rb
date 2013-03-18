@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+	before_filter :authenticate_user!, except: [:index, :show]
   def new 
   	@article = Article.new
   	@issues = Issue.all
