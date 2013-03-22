@@ -4,9 +4,13 @@ Prelude::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :articles
-
-  get "pages/home"
+  resources :issues
+  
   root :to => 'articles#index'
+
+  
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
