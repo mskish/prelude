@@ -1,0 +1,15 @@
+<%= simple_form_for(@issue) do |issue| %>
+	<div class="form-horizontal">
+
+		<%= issue.input :title %> 
+
+		<%= issue.input :published_at %>
+		
+		<div class="control-group">
+			<div class="controls">
+				<%= issue.submit "Submit", class: "btn btn-primary" %>
+			</div>
+		</div>
+
+	</div>
+<% end %>

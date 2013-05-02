@@ -1,6 +1,8 @@
 <h1>Edit an Article</h1>
 <%= render 'form' %>
 
+<%= link_to "Delete Article?", @article, :method => :delete, :confirm => "Really?",class: "btn btn-danger offset1" %>
+
 
 
 
