@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 			flash[:success] = "Article Created"
 			redirect_to @article
 		else 
+			@issues = Issue.all
 			render "new"
 			# need to test the validation when have defined what an error might be
 		end
@@ -27,6 +28,7 @@ class ArticlesController < ApplicationController
 			flash[:success] = "Article Updated"
 			redirect_to @article
 		else 
+			@issues = Issue.all
 			render "edit"
 			# need to test the validation when have defined what an error might be
 		end

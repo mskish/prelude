@@ -37,4 +37,13 @@ class IssuesController < ApplicationController
 		end
 	end
 
+	def destroy
+  	@issue = Issue.find(params[:id])
+  	@issue.destroy
+  	flash[:success] = "Issue Deleted"
+  	redirect_to issues_path
+	end
+
+
+
 end
