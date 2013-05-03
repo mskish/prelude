@@ -1,1 +1,16 @@
-<h1><%= @issue.title %></h1>
+<div class="hero-unit">
+	<h1><%= @issue.title %></h1>
+	<p><%= @issue.description %></p>
+</div>
+
+<div class="articles">
+ 
+	<% for article in @issue.articles %>
+
+		<h1><%= link_to article.title, article %></h1>
+		<h3 class="byline">By <%= article.author %></h3>
+		<p class="lead summary"><%= article.summary %></p>
+		<hr/>
+
+	<% end %> 
+</div>

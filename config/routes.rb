@@ -6,7 +6,7 @@ Prelude::Application.routes.draw do
   resources :articles
   resources :issues
   
-  root :to => 'articles#index'
+  root :to => 'issues#index'
 
   
 
