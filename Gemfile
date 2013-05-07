@@ -7,6 +7,8 @@ gem "paperclip", "~> 3.0"
 gem 'simple_form'
 gem 'devise'
 gem 'newrelic_rpm'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

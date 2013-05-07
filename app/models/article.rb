@@ -3,4 +3,8 @@ class Article < ActiveRecord::Base
   belongs_to :issue
   validates_presence_of :title, :author, :issue_id
 
+  searchable do
+  	text :title, :author, :content, :summary	
+  end
+
 end

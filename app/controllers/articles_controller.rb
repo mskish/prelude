@@ -35,8 +35,12 @@ class ArticlesController < ApplicationController
 	end
 
 	def index 
-		@articles = Article.order("title asc")
+		@search = Article.search do 
+			fulltext params[:search]
+		end
+		@articles = @search.results
 	end
+
 
 	def show
 		@article = Article.find(params[:id])
