@@ -12,7 +12,7 @@
 		<%= article.input :published_at %>
 
 		<%= article.input :issue_id, 
-											collection: @issues.map { |issue| issue.id } %>
+											collection: @issues.map { |issue| [issue.title, issue.id] } %>
 
 		<div class="control-group">
 			<%= article.label :content, class: "control-label" %>
