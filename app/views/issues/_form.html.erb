@@ -1,12 +1,14 @@
 <%= simple_form_for(@issue) do |issue| %>
 	<div class="form-horizontal">
 
-		<%= issue.input :title %> 
+		<%= issue.input :title %>
 
 		<%= issue.input :published_at %>
 
-		<%= issue.input :description %> 
-		
+		<%= issue.input :description,
+											as: :text,
+											input_html: { rows: "3"} %>
+
 		<div class="control-group">
 			<div class="controls">
 				<%= issue.submit "Submit", class: "btn btn-primary" %>
