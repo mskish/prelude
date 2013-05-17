@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   belongs_to :issue
   validates_presence_of :title, :author, :issue_id
 
-  acts_as_list
+  acts_as_list scope: :issue
   		
   searchable do
   	text :title, :author, :content, :summary
