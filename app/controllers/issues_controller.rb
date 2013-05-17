@@ -6,7 +6,7 @@ class IssuesController < ApplicationController
 	end
 
 	def index 
-		@issues = Issue.order("published_at asc")
+		@issues = Issue.order("position")
 	end
 
 	def new 

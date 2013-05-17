@@ -9,6 +9,7 @@ gem 'devise'
 gem 'newrelic_rpm'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'acts_as_list'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

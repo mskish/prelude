@@ -14,6 +14,8 @@
 		<%= article.input :issue_id, 
 											collection: @issues.map { |issue| [issue.title, issue.id] } %>
 
+		<%= article.input :position %>
+
 		<div class="control-group">
 			<%= article.label :content, class: "control-label" %>
 			<div class="controls">
