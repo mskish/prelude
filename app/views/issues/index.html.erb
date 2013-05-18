@@ -9,7 +9,7 @@
 
 	<% for issue in @issues %>
 
-		<h1><%= link_to issue.title, issue %></h1>
+		<h1>Issue <%= issue.position %>: <%= link_to issue.title, issue %></h1>
 		<p><%= issue.description %></p>
 		<hr/>
 

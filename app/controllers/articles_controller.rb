@@ -46,6 +46,10 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
+	def create
+  	@user = User.create( params[:user] )
+	end
+
 	def destroy
   	@article = Article.find(params[:id])
   	@article.destroy

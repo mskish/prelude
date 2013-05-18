@@ -37,6 +37,11 @@ class IssuesController < ApplicationController
 		end
 	end
 
+	def create
+  	@user = User.create( params[:user] )
+	end
+	# CAN YOU HAVE TWO CREATE????
+
 	def destroy
   	@issue = Issue.find(params[:id])
   	@issue.destroy
