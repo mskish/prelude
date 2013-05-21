@@ -4,11 +4,14 @@
 <% end %>
 
 <div class="hero-unit">
+	<%= image_tag @issue.cover.url(:thumb), class: "pull-right" %>
 	<h1><%= @issue.title %></h1>
-	<p><%= @issue.description %></p>
+	<p><%= @issue.description %></p>	
 </div>
 
 <div class="articles">
+
+
  
 	<% for article in @issue.articles.order("position") %>
 
