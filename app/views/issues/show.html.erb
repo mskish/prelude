@@ -4,15 +4,21 @@
 <% end %>
 
 <div class="hero-unit">
-	<%= image_tag @issue.cover.url(:thumb), class: "pull-right" %>
-	<h1><%= @issue.title %></h1>
-	<p><%= @issue.description %></p>	
+	<div class="row">
+		<div class="span2">
+			<%= image_tag @issue.cover.url(:thumb) %>
+		</div>
+		<div class="span8">
+			<h1><%= @issue.title %></h1>
+			<p><%= @issue.description %></p>
+		</div>
+	</div>
 </div>
 
 <div class="articles">
 
 
- 
+
 	<% for article in @issue.articles.order("position") %>
 
 		<h1><%= link_to article.title, article %></h1>
@@ -20,5 +26,5 @@
 		<p class="lead summary"><%= article.summary %></p>
 		<hr/>
 
-	<% end %> 
+	<% end %>
 </div>

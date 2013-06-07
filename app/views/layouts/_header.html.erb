@@ -1,16 +1,16 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
- 
+
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
- 
-      <%= link_to "Bloomberg Projects & Investigations", root_path, class: "brand" %>
- 
+
+      <%= link_to content_tag(:strong, "Bloomberg Projects & Investigations"), root_path, class: "brand" %>
+
       <div class="nav-collapse collapse">
 
         <%= form_tag articles_path, :method => :get, class: "navbar-search pull-right" do %>
@@ -20,7 +20,7 @@
           <% end %>
 
 
-      	
+
 		    <ul class="nav pull-right">
           <% if user_signed_in? %>
             <li><%= link_to "New Issue",new_issue_path %></li>
@@ -29,7 +29,7 @@
           <% end %>
 		    </ul>
       </div>
- 
+
     </div>
   </div>
 </div>

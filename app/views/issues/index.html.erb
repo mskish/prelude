@@ -5,14 +5,23 @@
 
 </div>
 
-<div class="articles">
+<div class="issues">
 
 	<% for issue in @issues %>
+  <div class="issue">
+    <div class="row">
+      <div class="span2">
+        <%= image_tag issue.cover.url(:thumb) %>
+      </div>
+      <div class="span8">
+        <h2>Issue <%= issue.position %>:</h2>
+        <h1><%= link_to issue.title, issue %></h1>
+    		<p><%= issue.description %></p>
+      </div>
+    </div>
+  </div>
+  <hr/>
 
-		<h1>Issue <%= issue.position %>: <%= link_to issue.title, issue %></h1>
-		<p><%= issue.description %></p>
-		<hr/>
-
-	<% end %> 
+	<% end %>
 
 </div>
